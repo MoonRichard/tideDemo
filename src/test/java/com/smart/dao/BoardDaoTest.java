@@ -1,4 +1,4 @@
-package com.smart.dao;
+/*package com.smart.dao;
 
 import com.smart.domain.Board;
 import com.smart.test.dataset.util.XlsDataSetBeanFactory;
@@ -17,14 +17,14 @@ import static org.testng.Assert.assertNotNull;
 @SpringApplicationContext({"xiaochun-dao.xml"})
 public class BoardDaoTest  extends UnitilsTestNG {
 
-    @SpringBean("boardDao")
+*//*    @SpringBean("boardDao")
     private BoardDao boardDao;
 
-    /**
+    *//**//**
      * 创建一个新的论坛版块,并更新
      *
      * @param
-     */
+     *//**//*
 
     @Test
     @DataSet(value = "XiaoChun.SaveBoards.xls")//准备数据
@@ -38,11 +38,11 @@ public class BoardDaoTest  extends UnitilsTestNG {
         }
     }
 
-    /**
+    *//**//**
      * 删除一个版块
      *
      * @param
-     */
+     *//**//*
 
     @Test
     @DataSet(value = "XiaoChun.Boards.xls")//准备数据
@@ -58,5 +58,5 @@ public class BoardDaoTest  extends UnitilsTestNG {
         Board board = boardDao.load(1);
         assertNotNull(board);
         assertEquals(board.getBoardName(), "SpringMVC");
-    }
-}
+    }*//*
+}*/

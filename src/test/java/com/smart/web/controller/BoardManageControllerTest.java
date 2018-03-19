@@ -3,7 +3,7 @@
  * Template path: templates/java/JavaClass.vtl
  */
 package com.smart.web.controller;
-
+/**
 import com.smart.cons.CommonConstant;
 import com.smart.dao.Page;
 import com.smart.domain.Board;
@@ -19,8 +19,9 @@ import org.unitils.spring.annotation.SpringBeanByType;
 
 import static org.testng.Assert.*;
 
-
+ **/
 public class BoardManageControllerTest  extends BaseWebTest {
+/*
 	@Autowired
 	private ForumService forumService;
 	@SpringBeanByType
@@ -109,5 +110,6 @@ public class BoardManageControllerTest  extends BaseWebTest {
 
 		controller.addPost(request,post );
 	}
+*/
 
 }

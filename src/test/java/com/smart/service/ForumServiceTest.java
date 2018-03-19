@@ -20,6 +20,7 @@ import static org.testng.Assert.assertNull;
  */
 public class ForumServiceTest extends BaseServiceTest {
 
+/*
     @SpringBean("forumService")
 	private ForumService forumService;
 
@@ -40,9 +41,11 @@ public class ForumServiceTest extends BaseServiceTest {
 		sf.evictQueries();
 	}
 
-	/**
+	*/
+/**
 	 * 测试新增一个版块
-	 */
+	 *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
 	public void addBoard() throws Exception {
@@ -54,9 +57,11 @@ public class ForumServiceTest extends BaseServiceTest {
 		assertEquals(boardDb.getBoardName(), "育儿");
 	}
 
-	/**
+	*/
+/**
 	 * 测试新增一个主题帖子
-	 */
+	 *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
 	public void addTopic() throws Exception {
@@ -77,9 +82,11 @@ public class ForumServiceTest extends BaseServiceTest {
 		assertEquals(topic.getTopicId()>0, true);
 	}
 
-	/**
+	*/
+/**
 	 * 测试删除帖子
-	 */
+	 *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
 	// 准备验证数据
@@ -89,10 +96,12 @@ public class ForumServiceTest extends BaseServiceTest {
 		assertNull(topicDb);
 	}
 
-	/**
+	*/
+/**
 	 * 测试添加回复帖子
 	 * 
-	 */
+	 *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
 	public void addPost() throws Exception {
@@ -114,9 +123,11 @@ public class ForumServiceTest extends BaseServiceTest {
 		assertEquals(topicDb.getReplies(), 2);
 	}
 	
-    /**
+    */
+/**
      * 测试删除回复帖子的方法
-     */
+     *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
     public void removePost()
@@ -132,9 +143,11 @@ public class ForumServiceTest extends BaseServiceTest {
 		assertEquals(topicDb.getReplies(), 0);
     }
 
-    /**
+    */
+/**
      * 测试置精华主题帖的服务方法
-     */
+     *//*
+
 	@Test
 	@DataSet("XiaoChun.DataSet.xls")
     public void makeDigestTopic()throws Exception
@@ -155,5 +168,6 @@ public class ForumServiceTest extends BaseServiceTest {
 		User userDb = userService.getUserByUserName("tom");
 		assertEquals(userDb.getManBoards().size()>0, true);
 	}
+*/
 
 }

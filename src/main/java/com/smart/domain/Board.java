@@ -16,11 +16,13 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+/*
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Table(name = "t_board")
 public class Board extends BaseDomain {
-
+*/
+/*
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "board_id")
@@ -77,7 +79,10 @@ public class Board extends BaseDomain {
 	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
+*//*
+
 
     
 
 }
+*/

@@ -1,5 +1,5 @@
 package com.smart.web.controller;
-
+/**
 import com.smart.domain.Board;
 import com.smart.domain.User;
 import com.smart.web.ForumManageController;
@@ -12,9 +12,9 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
-
+**/
 public class ForumManageControllerTest  extends BaseWebTest {
-	@SpringBeanByType
+/*	@SpringBeanByType
 	private ForumManageController controller;
 
 	@Test
@@ -101,5 +101,5 @@ public class ForumManageControllerTest  extends BaseWebTest {
 		ModelAndView mav = controller.userLockManage("tom","1");
 		assertNotNull(mav);
 		assertEquals(mav.getViewName(), "/success");
-	}
+	}*/
 }

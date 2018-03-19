@@ -14,11 +14,13 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+/*
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Table(name = "t_login_log")
 public class LoginLog extends BaseDomain {
-	@Id
+*/
+/*	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "login_log_id")
 	private int loginLogId;
@@ -57,6 +59,8 @@ public class LoginLog extends BaseDomain {
 	}
 	public void setUser(User user) {
 		this.user = user;
-	}
+	}*//*
+
 
 }
+*/

@@ -28,7 +28,7 @@ public class LoginController extends BaseController {
 		this.userService = userService;
 	}
 
-	/**
+	/*//**
      * 用户登陆
      * @param request
      * @param user
@@ -46,9 +46,9 @@ public class LoginController extends BaseController {
 		} else if (dbUser.getLocked() == User.USER_LOCK) {
 			mav.addObject("errorMsg", "用户已经被锁定，不能登录。");
 		} else {
-			dbUser.setLastIp(request.getRemoteAddr());
-			dbUser.setLastVisit(new Date());
-			userService.loginSuccess(dbUser);
+/*			dbUser.setLastIp(request.getRemoteAddr());
+			dbUser.setLastVisit(new Date());*/
+			//userService.loginSuccess(dbUser);
 			setSessionUser(request,dbUser);
 			String toUrl = (String)request.getSession().getAttribute(CommonConstant.LOGIN_TO_URL);
 			request.getSession().removeAttribute(CommonConstant.LOGIN_TO_URL);

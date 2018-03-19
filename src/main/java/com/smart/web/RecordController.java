@@ -1,7 +1,8 @@
+
 package com.smart.web;
 
 import com.smart.cons.CommonConstant;
-import com.smart.domain.Board;
+
 import com.smart.domain.Record;
 import com.smart.domain.User;
 import com.smart.service.RecordService;
@@ -34,20 +35,20 @@ public class RecordController {
     }
 
 
-    @RequestMapping(value = "/record", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listAllBoards() {
         ModelAndView view =new ModelAndView();
         List<Record> records = recordService.getAllRecords();
         view.addObject("records", records);
-        view.setViewName("/listAllRecords");
+        view.setViewName("/index");
         return view;
     }
-
     /**
      * 添加record页面
      *
      * @return
-     */
+     **/
+
     @RequestMapping(value = "/record/addRecord", method = RequestMethod.GET)
     public ModelAndView addTopicPage() {
         ModelAndView view =new ModelAndView();
@@ -73,3 +74,4 @@ public class RecordController {
                 CommonConstant.USER_CONTEXT);
     }
 }
+

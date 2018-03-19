@@ -23,20 +23,33 @@ public class UserDaoTest extends BaseDaoTest {
 	public void findUserByUserName() {
 		User user = userDao.getUserByUserName("tony");
 		assertNull("不存在用户名为tony的用户!", user);
-		user = userDao.getUserByUserName("jan");
-		assertNotNull("Jan用户存在！", user);
-		assertEquals("jan", user.getUserName());
-		assertEquals("123456",user.getPassword());
-		assertEquals(10,user.getCredit());
+		user = userDao.getUserByUserName("john");
+		assertNotNull("John用户存在！", user);
+		assertEquals("john", user.getUserName());
+		assertEquals("123",user.getPassword());
+		assertEquals(1, user.getUserType());
+		assertEquals(0, user.getLocked());
+		assertEquals("深圳", user.getUserLocation());
+		assertEquals(1, user.getUserSex());
+		assertEquals(10, user.getUserAge());
 	}
 
 	// 验证数据库保存的正确性
 	@Test
-	@DataSet("XiaoChun.SaveUser.xls")
-	@ExpectedDataSet("XiaoChun.ExpectedSaveUser.xls")// 准备验证数据
+	@DataSet(value = "XiaoChun.Users.xls")
 	public void saveUser()throws Exception  {
-		User u  = XlsDataSetBeanFactory.createBean(UserDaoTest.class,"XiaoChun.SaveUser.xls", "t_user", User.class);
-		userDao.update(u);  //执行用户信息更新操作
+		User user = new User();
+		user.setUserId(4);
+		user.setUserName("tim");
+		user.setPassword("123");
+		user.setUserType(1);
+		user.setLocked(0);
+		user.setUserLocation("sb");
+		user.setUserSex(1);
+		user.setUserAge(10);
+		userDao.save(user);
+		user = userDao.getUserByUserName("tim");
+		assertNotNull("d", user);
 	}
 	
 

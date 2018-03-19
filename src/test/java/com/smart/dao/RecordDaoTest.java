@@ -1,3 +1,4 @@
+/*
 package com.smart.dao;
 
 import com.smart.domain.Board;
@@ -57,3 +58,4 @@ public class RecordDaoTest extends UnitilsTestNG {
 
 
 }
+*/

@@ -20,7 +20,7 @@ import com.smart.service.UserService;
  */
 @Controller                   
 public class RegisterController extends BaseController {
-	/**
+	/*
 	 * 自动注入
 	 */
 	private UserService userService;
@@ -30,7 +30,7 @@ public class RegisterController extends BaseController {
 		this.userService = userService;
 	}
 
-	/**
+	/*
 	 * 用户登录
 	 * @param request
 	 * @param user

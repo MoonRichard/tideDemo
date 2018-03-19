@@ -288,11 +288,11 @@
                 <configuration>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>80</port>
+                            <port>81</port>
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
-                    <contextPath>/forum</contextPath>
+                    <contextPath>/tide</contextPath>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
                 </configuration>
             </plugin>

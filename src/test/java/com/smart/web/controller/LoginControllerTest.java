@@ -21,7 +21,7 @@ public class LoginControllerTest extends BaseWebTest {
 		User user = new User();
 		user.setUserName("test");
 		user.setPassword("1234");
-
+        user.setUserLocation("北京");
 		// 向控制发起请求 ” /loginCheck.html”
 		ModelAndView mav = controller.login(request, user);
 		User userBack = (User) request.getSession().getAttribute(CommonConstant.USER_CONTEXT);
@@ -29,7 +29,8 @@ public class LoginControllerTest extends BaseWebTest {
 		assertNotNull(mav);
 		assertNotNull(userBack);
 		assertEquals(userBack.getUserName(), "test");// ⑧ 验证返回结果
-		assertEquals(userBack.getCredit()> 5, true);
+		assertEquals(userBack.getUserLocation(), "北京");
+		//assertEquals(userBack.getCredit()> 5, true);
 	}
 	
 

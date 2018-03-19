@@ -1,3 +1,4 @@
+
 package com.smart.service;
 
 import com.smart.dao.UserDao;
@@ -13,10 +14,12 @@ import static org.mockito.Mockito.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
+
 /**
  * 测试用户管理器服务类的方法
  * 
  */
+
 public class UserServiceTest extends BaseServiceTest {
 	private UserDao userDao;
 	private UserService userService;
@@ -33,13 +36,15 @@ public class UserServiceTest extends BaseServiceTest {
 		User user = new User();
 		user.setUserName("testwww");
 		user.setPassword("1234");
-		
 		doAnswer(new Answer<User>() {
 			public User answer(InvocationOnMock invocation) {
 				Object[] args = invocation.getArguments();
 				User user = (User) args[0];
 				if (user != null) {
 					user.setUserId(1);
+					user.setUserLocation("北京");
+					user.setUserAge(20);
+					user.setUserSex(1);
 				}
 				return user;
 			}
@@ -47,19 +52,26 @@ public class UserServiceTest extends BaseServiceTest {
 			
 		userService.register(user);
 		assertEquals(user.getUserId(), 1);
+		assertEquals(user.getUserAge(), 20);
+		assertEquals(user.getUserSex(), 1);
+		assertEquals(user.getUserLocation(), "北京");
 		verify(userDao, times(1)).save(user);
 	}
 	
 
-	/**
+
+/**
 	 * 测试根据用户名模糊查询用户列表的方式
 	 */
+
 	@Test
 	public void getUserByUserName() {
 		User user = new User();
 		user.setUserName("tom");
 		user.setPassword("1234");
-		user.setCredit(100);
+
+/*		user.setCredit(100);*/
+
 		doReturn(user).when(userDao).getUserByUserName("tom");
 		
 		
@@ -69,9 +81,11 @@ public class UserServiceTest extends BaseServiceTest {
 		verify(userDao, times(1)).getUserByUserName("tom");
 	}
 
-	/**
+
+/**
 	 * 测试锁定用户的服务方法
 	 */
+
 	@Test
 	public void lockUser() {
 		User user = new User();
@@ -133,3 +147,4 @@ public class UserServiceTest extends BaseServiceTest {
 	}
 
 }
+

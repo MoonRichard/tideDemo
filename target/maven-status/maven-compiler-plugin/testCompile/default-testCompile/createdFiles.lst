@@ -7,13 +7,11 @@ com\smart\test\dataset\util\XlsDataSetBeanFactory.class
 com\smart\service\ForumServiceTest.class
 com\smart\web\controller\BaseWebTest.class
 com\smart\service\UserServiceTest.class
-com\smart\dao\RecordDaoTest.class
 com\smart\web\controller\BoardManageControllerTest.class
 com\smart\dao\BaseDaoTest.class
 com\smart\dao\TopicDaoTest.class
+com\smart\service\RecordServiceTest.class
 com\smart\web\controller\ForumManageControllerTest.class
 com\smart\web\controller\RegisterControllerTest.class
-com\smart\dao\PostDaoTest.class
 com\smart\test\dataset\excel\MultiSchemaXlsDataSetReader$XlsTable.class
-com\smart\dao\BoardDaoTest.class
 com\smart\test\dataset\excel\MultiSchemaXlsDataSetReader.class

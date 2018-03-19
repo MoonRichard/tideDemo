@@ -1,14 +1,14 @@
 package com.smart.dao;
 
-import com.smart.domain.Topic;
-import com.smart.domain.User;
-import com.smart.test.dataset.util.XlsDataSetBeanFactory;
-import org.testng.annotations.Test;
-import org.unitils.dbunit.annotation.DataSet;
-import org.unitils.dbunit.annotation.ExpectedDataSet;
-import org.unitils.spring.annotation.SpringBean;
-
-import java.util.List;
+//import com.smart.domain.Topic;
+//import com.smart.domain.User;
+//import com.smart.test.dataset.util.XlsDataSetBeanFactory;
+//import org.testng.annotations.Test;
+//import org.unitils.dbunit.annotation.DataSet;
+//import org.unitils.dbunit.annotation.ExpectedDataSet;
+//import org.unitils.spring.annotation.SpringBean;
+//
+//import java.util.List;
 
 /**
  * topic 的DAO类
@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class TopicDaoTest extends BaseDaoTest {
 
-	@SpringBean("topicDao")
+/*	@SpringBean("topicDao")
 	private TopicDao topicDao;
 	
 	@Test
@@ -30,5 +30,5 @@ public class TopicDaoTest extends BaseDaoTest {
 			topic.setUser(user);
 	    	topicDao.save(topic);
 	    }
-	}
+	}*/
 }

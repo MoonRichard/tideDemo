@@ -30,8 +30,10 @@ public class Record extends BaseDomain {
 
     @Column(name = "event_Location")
     private String eventLocation;
-    @Column(name = "event_time")
+
+     @Column(name = "event_time")
     private java.sql.Date eventTime;
+
     @Column(name = "create_Time")
     private Timestamp createTime;
     @Column(name = "favor_num")
@@ -73,13 +75,6 @@ public class Record extends BaseDomain {
         this.eventLocation = eventLocation;
     }
 
-    public java.sql.Date getEvenTime() {
-        return eventTime;
-    }
-
-    public void setEvenTime(java.sql.Date evenTime) {
-        this.eventTime = evenTime;
-    }
 
     public Timestamp getCreateTime() {
         return createTime;
@@ -95,5 +90,13 @@ public class Record extends BaseDomain {
 
     public void setFavorNum(int favorNum) {
         this.favorNum = favorNum;
+    }
+
+    public java.sql.Date getEventTime() {
+        return eventTime;
+    }
+
+    public void setEventTime(java.sql.Date eventTime) {
+        this.eventTime = eventTime;
     }
 }
